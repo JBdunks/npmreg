@@ -9,18 +9,18 @@ const DetailsPage = () => {
                 {details.name}
             </h1>
             <div>
-                <h3 className="text-lg font-bold">Description</h3>
-                <div className = 'p-3 bg-gray-200 rounded'>{details.description}</div>
+                <h3 className="d-text">Description</h3>
+                <div className = 'd-bar'>{details.description}</div>
             </div>
 
             <div>
-                <h3 className="text-lg font-bold">License</h3>
-                <div className = 'p-3 bg-gray-200 rounded'>{details.license}</div>
+                <h3 className="d-text">License</h3>
+                <div className = 'd-bar'>{details.license}</div>
             </div>
 
             <div>
-                <h3 className="text-lg font-bold">Author</h3>
-                <div className = 'p-3 bg-gray-200 rounded'>{details.author ? details.author.name : 'No author listed'}</div>
+                <h3 className="d-text">Author</h3>
+                <div className = 'd-bar'>{details.author ? details.author.name : 'No author listed'}</div>
             </div>
             
         </div>

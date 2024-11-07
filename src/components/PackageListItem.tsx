@@ -8,7 +8,7 @@ interface PackageListItemProps {
 const PackageListItem = ({ pack }: PackageListItemProps) => {
     const renderedKeywords = (pack.keywords || []).map((keyword) => {
         return(
-            <div key ={keyword} className = 'border py-0.5 px-1 text-xs bg-slate-300 rounded'>
+            <div key ={keyword} className = 'border py-0.5 px-1 text-xs text-white bg-slate-700 rounded'>
                 {keyword}
             </div>
         )
@@ -28,7 +28,7 @@ const PackageListItem = ({ pack }: PackageListItemProps) => {
                 </div>
             </div>
             <div className="mr-6">
-                <Link to={`/packages/${pack.name}`} className = 'py-2 px-3 rounded border bg-black text-white text-lg hover:text-black hover:bg-white hover:border-black duration-200'>
+                <Link to={`/packages/${pack.name}`} className = 'p-btn'>
                 View
                 </Link>
             </div>

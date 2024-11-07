@@ -7,6 +7,7 @@ interface SearchResponse {
             description: string;
             version: string;
             keywords: string[];
+            
         }
     }[]
 }
@@ -17,25 +18,15 @@ export async function searchPackages(term: string): Promise<PackageSummary[]> {
       )
 
       const data: SearchResponse = await res.json()
-
-
-      
-    //   return data.objects.map((searchResult)=>{
-    //     return {
-    //         name: searchResult.package.name,
-    //         description: searchResult.package.description,
-    //         version: searchResult.package.version,
-    //         keywords: searchResult.package.keywords
-    //     }
-    //   });
-    // how this would look without data destructuing
-
-    return data.objects.map(({ package : { name, description, version, keywords } })=> {
+        console.log(data)
+    return data.objects.map(({ package : { name, description, version, keywords} })=> {
+        
         return{
             name,
             description,
             version,
-            keywords
+            keywords,
+           
         };
     });
 }
